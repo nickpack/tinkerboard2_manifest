@@ -23,7 +23,7 @@
     <linkfile dest="envsetup.sh" src="build/envsetup.sh"/>
   </project>
   <project path="debian" name="tinkerboard2_debian" remote="nickpack" />
-  <project path="device/rockchip" name="device-rockchip" >
+  <project path="device/rockchip" name="device-rockchip" remote="nickpack">
     <linkfile dest="mkfirmware.sh" src="tinker_board_2/mkfirmware.sh"/>
     <linkfile dest="build.sh" src="tinker_board_2/build.sh"/>
     <linkfile dest="rkflash.sh" src="common/rkflash.sh"/>
