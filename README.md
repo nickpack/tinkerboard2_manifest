@@ -12,7 +12,12 @@ This project has two simple goals (Whether I meet them or not will depend on the
 
 ## Current status
 
-I have only just started, so will update this when I have some progress, for now all I have fixed is the broken build script.
+I have only just started, so will update this when I have some progress.
+
+I don't have a Tinker Board 2S to test this on, only a standard 2 so I haven't tested any of the eMMC related stuff...
+
+### Changes/Fixed issues
+* Fixed build.sh issues so that a full image can be built with the default 'desktop' target, all working as expected on a standard Tinker Board 2.
 
 ## Building an image
 
@@ -41,6 +46,8 @@ Once the container build is complete, a docker exec session is opened to the chr
 ```
 
 That should build everything, there are a miriad of options you can give the build script, I will document these later, for now you'll have to root around in the source.
+
+Once your build is complete, you will find the output images in ./rockdev - if you want to flash a complete image, it is called *sdboot.img*
 
 ## Maintainer
 
