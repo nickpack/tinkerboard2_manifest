@@ -5,7 +5,7 @@
 	  review="https://github.com/TinkerBoard2/" />
 
   <remote name="nickpack"
-    fetch="git://github.com/nickpack/" />
+    fetch="https://github.com/nickpack/" />
 
   <default revision="linux4.19-rk3399-debian10"
            remote="github"
