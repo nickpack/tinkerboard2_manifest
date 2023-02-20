@@ -4,6 +4,9 @@
 	  fetch="https://github.com/TinkerBoard2/"
 	  review="https://github.com/TinkerBoard2/" />
 
+  <remote name="nickpack"
+    fetch="git://github.com/nickpack/" />
+
   <default revision="linux4.19-rk3399-debian10"
            remote="github"
            sync-c="true" />
@@ -19,7 +22,7 @@
     <linkfile dest="Makefile" src="build/Makefile"/>
     <linkfile dest="envsetup.sh" src="build/envsetup.sh"/>
   </project>
-  <project path="debian" name="debian" />
+  <project path="debian" name="tinkerboard2_debian" remote="nickpack" />
   <project path="device/rockchip" name="device-rockchip" >
     <linkfile dest="mkfirmware.sh" src="tinker_board_2/mkfirmware.sh"/>
     <linkfile dest="build.sh" src="tinker_board_2/build.sh"/>
