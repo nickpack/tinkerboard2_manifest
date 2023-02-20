@@ -18,7 +18,7 @@
   <project path="app/qfm" name="app-qfm" />
   <project path="app/qplayer" name="app-qplayer" />
   <project path="app/qsetting" name="app-qsetting" />
-  <project path="buildroot" name="buildroot" >
+  <project path="buildroot" name="tinkerboard2_buildroot" remote="nickpack">
     <linkfile dest="Makefile" src="build/Makefile"/>
     <linkfile dest="envsetup.sh" src="build/envsetup.sh"/>
   </project>
