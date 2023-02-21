@@ -16,6 +16,8 @@ I have only just started, so will update this when I have some progress.
 
 I don't have a Tinker Board 2S to test this on, only a standard 2 so I haven't tested any of the eMMC related stuff...
 
+I was hoping that producing a minimal image would be as simple as adding another target in debian/ubuntu-build service with less package selections, I was wrong - there is a lot of inherited stuff both from rockchip and linaro, I am experimenting with configs in the buildroot to see if I can work around this.
+
 ### Changes/Fixed issues
 * Fixed build.sh issues so that a full image can be built with the default 'desktop' target, all working as expected on a standard Tinker Board 2.
 
