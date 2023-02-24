@@ -22,14 +22,15 @@ Turns out that switching more or less everything off in the buildroot does not a
 
 There is a bash script that does a bunch of manual installs during the build (https://github.com/nickpack/tinkerboard2_debian/blob/linux4.19-rk3399-debian10/mk-rootfs-buster.sh#L108), yocto is next on the investigation list.
 
-So far, I have only managed to shave 200MB(ish) off of the standard image by doing:
+So far, I have managed to get the base image down to a couple of hundred MB (though it is unstable AF so I won't publish the changes yet) by doing the following:
 
 * Remove includes that pull in packages that aren't required from the buildroot board config (https://github.com/nickpack/tinkerboard2_buildroot/blob/linux4.19-rk3399-debian10/configs/rockchip_tinker_board_2_defconfig)
 * Switch off all non-essential packages in the buildroot config for the board (BR2_PACKAGE_ variables in https://github.com/nickpack/tinkerboard2_buildroot/blob/linux4.19-rk3399-debian10/configs/rockchip_tinker_board_2_defconfig)
-* Hack out all of the apt installs from the script mentioned in the paragraph above
+* Hack out all of the apt installs from the script https://github.com/nickpack/tinkerboard2_debian/blob/linux4.19-rk3399-debian10/mk-rootfs-buster.sh#L108
 * Delete all non-essential package lines from https://github.com/nickpack/tinkerboard2_debian/blob/linux4.19-rk3399-debian10/ubuntu-build-service/buster-desktop-arm64/customization/package-lists/linaro.list.chroot
+* Comment out the includes in https://github.com/nickpack/tinkerboard2_yocto-build-conf/blob/linux4.19-rk3399-debian10/rockchip-rk3399-tinker_board_2.conf
 
-More investigation required, I haven't come across yocto before so I need to go down this path next.
+More investigation required, I haven't come across yocto before so I need to go further down this path.
 
 ### Changes/Fixed issues
 * Fixed build.sh issues so that a full image can be built with the default 'desktop' target, all working as expected on a standard Tinker Board 2.
